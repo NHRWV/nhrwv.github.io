@@ -171,14 +171,14 @@
   function makeProfileList(){
     let inner = "";
     if(handles['BOJ'] !== 'None'){
-      inner += `<li>BOJ: <a id="BOJ" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></li>\n`;
-      inner += `<li>solvedac: <a id="solved" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></li>`;
+      inner += `<li>BOJ : <a id="BOJ" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></li>\n`;
+      inner += `<li>solvedac : <a id="solved" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></li>`;
     }
     if(handles['codeforces'] !== 'None'){
-      inner += `<li>Codeforces: <a id="codeforces" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a> / <a id="mx_codeforces" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></li>`;
+      inner += `<li>Codeforces : <a id="codeforces" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a> / <a id="mx_codeforces" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></li>`;
     }
     if(handles['atcoder'] !== 'None'){
-      inner += `<li>atcoder: <a id="atcoder" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></li>`;
+      inner += `<li>atcoder : <a id="atcoder" target="_blank" style="text-decoration:none;font-weight:bold;">loading</a></li>`;
     }
 
     let ul = document.getElementById('profile-list');
