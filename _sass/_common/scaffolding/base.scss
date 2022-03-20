@@ -25,8 +25,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-family-headings;
 }
 
-h1 { margin: 20px 0px 40px 15px; }
-h2, h3, h4, h5, h6 { margin: 20px 0px 20px 15px; }
+h1 { margin: 20px 0px 40px 0px; }
+h2, h3, h4, h5, h6 { margin: 20px 0px 20px 0px; }
 
 @for $headline from 1 through 6 {
   h#{$headline} {
