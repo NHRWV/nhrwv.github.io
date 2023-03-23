@@ -3,7 +3,7 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
-  const boj_bias = {{ include.boj_bias | default: 0 }}; // Difference between BOJ and solved.ac
+  #const boj_bias = {{ include.boj_bias | default: 0 }}; // Difference between BOJ and solved.ac
   let ratings = { 'codeforces':0, 'BOJ':0, "solved":0, 'atcoder':0 };
   //let handles = { 'codeforces':'NHRWV' , 'BOJ':'nhk9503' };
   let handles = { 'codeforces':'{{ include.codeforces_id | default: "None" }}', 'BOJ':'{{ include.boj_id | default: "None" }}', 'atcoder':'{{ include.atcoder_id | default: "None" }}'};
@@ -70,7 +70,13 @@
     if(service === 'BOJ') cf.innerHTML = `${handles[service]} (${ratings['BOJ'].toString()} solved)`;
     else if(service === 'solved') cf.innerHTML = `${handles[service]} (${ratings['solved_ac_rating']}, ${solved_tier[ratings[service]]})`;
     else if(service === 'mx_codeforces') cf.innerHTML = `Max. ${ratings[service]}`;
-    else cf.innerHTML = `${handles[service]} (${ratings[service].toString()})`;
+    else {
+      if(ratings[service] >= 3000)
+        cf.innerHTML = `<span style="color:black">${handles[service].substr(0,1)}</span>${handles[service].substr(1)} (${ratings[service].toString()})`;
+      else
+        cf.innerHTML = `${handles[service]} (${ratings[service].toString()})`;
+    }
+    #else cf.innerHTML = `${handles[service]} (${ratings[service].toString()})`;
 
     
  //   setRainbow('BOJ');
@@ -173,7 +179,7 @@
   function getAtCoderInfo() {
     $.ajax({
       type: 'GET',
-      url: 'https://kyopro-ratings.herokuapp.com/json?atcoder='+handles['atcoder'],
+      url: 'https://kyopro-ratings.jp1.su8.run/json?atcoder='+handles['atcoder'],
       dataType: 'json',
       timeout: 10000,
       cache: false,
