@@ -3,7 +3,7 @@
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script type="text/javascript">
-  #const boj_bias = {{ include.boj_bias | default: 0 }}; // Difference between BOJ and solved.ac
+  //const boj_bias = {{ include.boj_bias | default: 0 }}; // Difference between BOJ and solved.ac
   let ratings = { 'codeforces':0, 'BOJ':0, "solved":0, 'atcoder':0 };
   //let handles = { 'codeforces':'NHRWV' , 'BOJ':'nhk9503' };
   let handles = { 'codeforces':'{{ include.codeforces_id | default: "None" }}', 'BOJ':'{{ include.boj_id | default: "None" }}', 'atcoder':'{{ include.atcoder_id | default: "None" }}'};
@@ -76,7 +76,7 @@
       else
         cf.innerHTML = `${handles[service]} (${ratings[service].toString()})`;
     }
-    #else cf.innerHTML = `${handles[service]} (${ratings[service].toString()})`;
+    
 
     
  //   setRainbow('BOJ');
@@ -124,7 +124,7 @@
   }
 
   function getBOJInfo() {
-    #handles['solved'] = handles['BOJ'];
+    //handles['solved'] = handles['BOJ'];
     $.ajax({
       type: 'GET',
       url: 'https://api.allorigins.win/raw?url=https://solved.ac/api/v3/search/problem?query=solved_by:'+handles['BOJ'],
@@ -134,18 +134,16 @@
       success: function(json) {
         if(json) {
           ratings['BOJ'] = json['Count'];
-          #ratings['solved'] = json['tier'];
-          #ratings['solved_ac_rating'] = json['rating'];
-          setHtml('BOJ'); #setHtml('solved');
+          //ratings['solved'] = json['tier'];
+          //ratings['solved_ac_rating'] = json['rating'];
+          setHtml('BOJ');
         }
         else {
           setHtmlWithoutColor('BOJ');
-          #setHtmlWithoutColor('solved');
         }
       },
       error: function() {
         setHtmlWithoutColor('BOJ');
-        #setHtmlWithoutColor('solved');
       }
     });
   }
