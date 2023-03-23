@@ -15,7 +15,7 @@ type: about
   * 아주대학교 경영대학원 Business analytics 전공 (2023.03 ~ ) 
   
 ### 온라인 저지 프로필
-{% include judge_profile.html boj_id="nhk9503" boj_bias="0" codeforces_id="NHRWV" atcoder_id="NHRWV" %}
+{% include judge_profile.html boj_id="nhk9503" codeforces_id="NHRWV" atcoder_id="NHRWV" %}
 
 
 ### 활동
