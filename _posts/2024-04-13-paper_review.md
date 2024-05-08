@@ -3,7 +3,7 @@ title: "Degree assortativity in collaboration networks
 and invention performance 논문 리뷰"
 date: 2024-04-13 15:30:00 +0900
 categories:
-- Reflections & Insights
+- Reflections and Insights
 tags:
 - 글쓰기
 - Reflections & Insights
