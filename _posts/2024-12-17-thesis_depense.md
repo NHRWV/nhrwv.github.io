@@ -25,6 +25,8 @@ tags:
 <img src="https://i.imgur.com/fWA8MZz.jpeg" width="490" height="280"/>
 
 
+<br>
+
 # 기록
 ### 8월 ~ 10월
 - 서버에 실험 환경 만들고 나서 다양한 모델을 시도하면서 RAG 파이프라인 실험 진행
