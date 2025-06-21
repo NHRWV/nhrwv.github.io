@@ -40,7 +40,7 @@ tags:
 
 # 심장을 바쳐라 
 
-<img src="https://i.imgur.com/4S16eiQ.png" width="450" height="450"/>  
+<img src="https://i.imgur.com/4S16eiQ.png" width="225" height="225"/>  
 
 ‘진격의 거인’ ⓒ 이사야마 하지메 / 코단샤 / MAPPA
 
